@@ -9,7 +9,7 @@ quoteme.js is a way to decorate your quotes on your site. It is:
  <li>Fun</li>
 </ul>
 
-<h3>Usage</h3>
+### Usage
 
 ```javascript
 $(document).ready(function(){
@@ -34,3 +34,5 @@ $(document).ready(function(){
     });
 });
 ```
+
+### Options
