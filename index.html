@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quote_me jQuery plug-in</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jQuery.quoteme.js"></script>
+        <script src="js/jQuery.timeme.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("span.quote").quoteme();
+                $("span.quote.blue").quoteme({
+                    textColor       : "blue",
+                    backgroundColor : "white"
+                });
+                $("span.quote.red").quoteme({
+                    textColor       : "red",
+                    backgroundColor : "white",
+                    borderColor     : "red",
+                    boxShadowColor  : "#ff208c"
+                });
+            });
+            
+        </script>
+    </head>
+    <body>
+        <div id="container" style="width:75%; margin:auto auto">
+            <h1>Quotes</h1>
+            <div class="timer">
+                <p id="timerName"></p>
+                <p id="time"></p>
+            </div>
+            <p>No quote</p>
+            <p><span class="quote">"It takes less time to do a thing right, than it does to explain why you did it wrong."</span></p>
+            <p><span class="quote">"Hello World!"</span> is what he said.</p>
+            <div>
+                <p>A new <span class="quote red">"DIV"</span> and <span class="quote blue">"P"</span> tag to test with</p>
+            </div>
+        </div>
+    </body>
+</html>
