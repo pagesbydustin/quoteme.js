@@ -57,3 +57,10 @@ $(document).ready(function(){
 
 ### Options
 
++ backgroundColor
++ cornerRadius
++ borderWidth
++ borderStyle
++ borderColor
++ textColor
++ boxShadowColor
