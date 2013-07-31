@@ -8,3 +8,5 @@ quoteme.js is a way to decorate your quotes on your site. It is:
  <li>Fast</li>
  <li>Fun</li>
 </ul>
+
+<h3>Usage</h3>
