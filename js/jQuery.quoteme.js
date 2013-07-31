@@ -10,6 +10,7 @@
             borderColor: "black",
             textColor: "black",
             boxShadowColor: "gray",
+            author: "Unknown"
         },
         settings = $.extend({}, defaults, options);
 
@@ -26,7 +27,31 @@
             "color": settings.textColor
         });
 
-        return this;
+        $.each($(this), function() {
+            if ($(this).data("author")) {
+                settings.author = $(this).data("author");
+                $(this).hover(
+                        function(e) {
+                            var positionLeft = e.pageX + 5;
+                            var positionTop = e.pageY - 15;
+                            $("body").append("<div class='tips'>By: <em>" + settings.author + "</em></div>");
+                            $(".tips").css({
+                                "position": "absolute",
+                                "z-index": "999",
+                                "top": positionTop,
+                                "left": positionLeft,
+                                "border": "1px silver solid",
+                                "padding": "8px",
+                                "background-color": "white",
+                                "border-radius": "10px",
+                                "box-shadow": "2px 2px 2px silver"
+                            });
+                        },
+                        function(e) {
+                            $("body div.tips").remove();
+                        });
+            }
+        }); return this;
     };
 })(jQuery);
 
