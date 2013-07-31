@@ -11,13 +11,16 @@ quoteme.js is a way to decorate your quotes on your site. It is:
 ### Usage
 HTML
 ```html
+<head>
+<!-- add jQuery library -->
+    <script src="js/jquery.min.js"></script>
+<!-- add jQuery quoteme.js plugin -->
+    <script src="js/jQuery.quoteme.js"></script>
+</head>
+
 <body>
     <div id="container" style="width:75%; margin:auto auto">
         <h1>Quotes</h1>
-        <div class="timer">
-            <p id="timerName"></p>
-            <p id="time"></p>
-        </div>
         <p>No quote</p>
         <p><span class="quote">"It takes less time to do a thing right, than it does to explain why you did it wrong."</span></p>
         <p><span class="quote">"Hello World!"</span> is what he said.</p>
