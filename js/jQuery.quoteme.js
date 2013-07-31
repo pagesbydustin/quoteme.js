@@ -1,7 +1,6 @@
 
 (function($) {
     $.fn.quoteme = function(options) {
-
         var defaults = {
             backgroundColor: '#d0d0d0',
             cornerRadius: "5px",
@@ -28,6 +27,7 @@
         });
 
         $.each($(this), function() {
+
             if ($(this).data("author")) {
                 settings.author = $(this).data("author");
                 $(this).hover(
@@ -44,14 +44,55 @@
                                 "padding": "8px",
                                 "background-color": "white",
                                 "border-radius": "10px",
-                                "box-shadow": "2px 2px 2px silver"
+                                "box-shadow": "2px 2px 2px silver",
+                            });
+                            $(this).css({
+                                "cursor": "pointer"
                             });
                         },
                         function(e) {
                             $("body div.tips").remove();
                         });
             }
-        }); return this;
+            if (options !== undefined) {
+                if (options.author !== undefined) {
+                    $(this).hover(
+                            function(e) {
+                                var positionLeft = e.pageX + 5;
+                                var positionTop = e.pageY - 15;
+                                $("body").append("<div class='tips'>By: <em>" + settings.author + "</em></div>");
+                                $(".tips").css({
+                                    "position": "absolute",
+                                    "z-index": "999",
+                                    "top": positionTop,
+                                    "left": positionLeft,
+                                    "border": "1px silver solid",
+                                    "padding": "8px",
+                                    "background-color": "white",
+                                    "border-radius": "10px",
+                                    "box-shadow": "2px 2px 2px silver",
+                                });
+                                $(this).css({
+                                    "cursor": "pointer"
+                                });
+                            },
+                            function(e) {
+                                $("body div.tips").remove();
+                            });
+                    console.log(options.author);
+                }
+
+            }
+
+            $("body").mousemove(function(e) {
+                $(".tips").css({
+                    "top": e.pageY - 50,
+                    "left": e.pageX - 25
+                });
+
+            });
+        });
+        return this;
     };
 })(jQuery);
 
