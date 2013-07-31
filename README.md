@@ -1,16 +1,33 @@
-<h1>quoteme.js</h1>
-<hr/>
-<p>
+## quoteme.js
+____________________
+
 quoteme.js is a way to decorate your quotes on your site. It is:
-</p>
-<ul>
- <li>Simple</li>
- <li>Fast</li>
- <li>Fun</li>
-</ul>
+
++ Simple
++ Fast
++ Fun
+
 
 ### Usage
-
+HTML
+```html
+<body>
+    <div id="container" style="width:75%; margin:auto auto">
+        <h1>Quotes</h1>
+        <div class="timer">
+            <p id="timerName"></p>
+            <p id="time"></p>
+        </div>
+        <p>No quote</p>
+        <p><span class="quote">"It takes less time to do a thing right, than it does to explain why you did it wrong."</span></p>
+        <p><span class="quote">"Hello World!"</span> is what he said.</p>
+        <div>
+            <p>A new <span class="quote red">"DIV"</span> and <span class="quote blue">"P"</span> tag to test with</p>
+        </div>
+    </div>
+</body>
+```
+JavaScript
 ```javascript
 $(document).ready(function(){
   //Select a span tag with the class of quote and add quoteme()
@@ -36,3 +53,4 @@ $(document).ready(function(){
 ```
 
 ### Options
+
