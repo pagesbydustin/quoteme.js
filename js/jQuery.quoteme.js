@@ -79,7 +79,6 @@
                             function(e) {
                                 $("body div.tips").remove();
                             });
-                    console.log(options.author);
                 }
 
             }
