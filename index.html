@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Quoteme.js by pagesbydustin</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Quoteme.js</h1>
+        <h2>Designer quote plugin</h2>
+        <a href="https://github.com/pagesbydustin/quoteme.js" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>
+<a name="quotemejs" class="anchor" href="#quotemejs"><span class="octicon octicon-link"></span></a>quoteme.js</h2>
+
+<hr><p>quoteme.js is a way to decorate your quotes on your site. It is:</p>
+
+<ul>
+<li>Simple</li>
+<li>Fast</li>
+<li>Fun</li>
+<li>Free</li>
+</ul><h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<p>HTML</p>
+
+<div class="highlight"><pre><span class="nt">&lt;head&gt;</span>
+<span class="c">&lt;!-- add jQuery library --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="c">&lt;!-- add jQuery quoteme.js plugin --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/jQuery.quoteme.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"container"</span> <span class="na">style=</span><span class="s">"width:75%; margin:auto auto"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>Quotes<span class="nt">&lt;/h1&gt;</span>
+        <span class="nt">&lt;p&gt;</span>No quote<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"quote"</span> <span class="na">data-author=</span><span class="s">"H.W.Longfellow"</span><span class="nt">&gt;</span>"It takes less time to do a thing right, than it does to explain why you did it wrong."<span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"quote"</span><span class="nt">&gt;</span>"Hello World!"<span class="nt">&lt;/span&gt;</span> is what he said.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;div&gt;</span>
+            <span class="nt">&lt;p&gt;</span>A new <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"quote red"</span><span class="nt">&gt;</span>"DIV"<span class="nt">&lt;/span&gt;</span> and <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"quote blue"</span><span class="nt">&gt;</span>"P"<span class="nt">&lt;/span&gt;</span> tag to test with<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</pre></div>
+
+<p>JavaScript</p>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="c1">//Select a span tag with the class of quote and add quoteme()</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"span.quote"</span><span class="p">).</span><span class="nx">quoteme</span><span class="p">();</span>
+
+  <span class="c1">//Select a span tag with the class of quote and blue and add quoteme() </span>
+  <span class="c1">//with custom blue text and white background</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"span.quote.blue"</span><span class="p">).</span><span class="nx">quoteme</span><span class="p">({</span>
+        <span class="nx">textColor</span>       <span class="o">:</span> <span class="s2">"blue"</span><span class="p">,</span>
+        <span class="nx">backgroundColor</span> <span class="o">:</span> <span class="s2">"white"</span>
+    <span class="p">});</span>
+
+  <span class="c1">//Select a span tag with the class of quote and red and add quoteme() </span>
+  <span class="c1">//with custom red text, white background, red border color and a boxShadow </span>
+  <span class="c1">//color #ff208c along with the name of the author</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"span.quote.red"</span><span class="p">).</span><span class="nx">quoteme</span><span class="p">({</span>
+        <span class="nx">textColor</span>       <span class="o">:</span> <span class="s2">"red"</span><span class="p">,</span>
+        <span class="nx">backgroundColor</span> <span class="o">:</span> <span class="s2">"white"</span><span class="p">,</span>
+        <span class="nx">borderColor</span>     <span class="o">:</span> <span class="s2">"red"</span><span class="p">,</span>
+        <span class="nx">boxShadowColor</span>  <span class="o">:</span> <span class="s2">"#ff208c"</span><span class="p">,</span>
+        <span class="nx">author</span>          <span class="o">:</span> <span class="s2">"Me"</span>
+    <span class="p">})</span>
+<span class="p">});</span>
+</pre></div>
+
+<h3>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
+
+<ul>
+<li>backgroundColor</li>
+<li>cornerRadius</li>
+<li>borderWidth</li>
+<li>borderStyle</li>
+<li>borderColor</li>
+<li>textColor</li>
+<li>boxShadowColor</li>
+<li>author</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/pagesbydustin/quoteme.js/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/pagesbydustin/quoteme.js/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/pagesbydustin/quoteme.js"></a> is maintained by <a href="https://github.com/pagesbydustin">pagesbydustin</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
