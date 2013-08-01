@@ -56,7 +56,7 @@ $(document).ready(function(){
     })
 });
 ```
-![alt text](https://github.com/pagesbydustin/quoteme.js/blob/master/images/Example%20img.PNG "Example Image")
+![alt text](https://raw.github.com/pagesbydustin/quoteme.js/master/images/Example%20img.PNG "Example Image")
 
 ### Options
 
