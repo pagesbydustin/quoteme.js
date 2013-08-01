@@ -56,6 +56,11 @@ $(document).ready(function(){
     })
 });
 ```
+### Note about setting the author
+The author of the quote can be added via the HTML `data-author` attribute or in the initial setting of options.
+
+### Example Image
+
 ![alt text](https://raw.github.com/pagesbydustin/quoteme.js/master/images/Example%20img.PNG "Example Image")
 
 ### Options
