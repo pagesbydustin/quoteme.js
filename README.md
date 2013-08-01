@@ -67,3 +67,5 @@ $(document).ready(function(){
 + textColor
 + boxShadowColor
 + author
+
+[See our page here] (http://pagesbydustin.github.io/quoteme.js)
