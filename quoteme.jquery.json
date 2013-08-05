@@ -2,6 +2,7 @@
     "name": "quoteme",
     "version": "1.0.0",
     "title": "quoteme.js",
+    "description": "A designer quote plugin that can have a tooltip on hover with authors name.",
     "author": {
         "name": "Dustin Parker",
         "url": "http://dpwebprogramming.com",
