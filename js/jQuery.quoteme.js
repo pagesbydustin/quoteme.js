@@ -40,11 +40,14 @@
                                 "z-index": "999",
                                 "top": positionTop,
                                 "left": positionLeft,
-                                "border": "1px silver solid",
+                                "border-width": settings.borderWidth,
+                                "border-color": settings.borderColor,
+                                "border-style": settings.borderStyle,
                                 "padding": "8px",
-                                "background-color": "white",
+                                "background-color": settings.backgroundColor,
                                 "border-radius": "10px",
-                                "box-shadow": "2px 2px 2px silver",
+                                "box-shadow": "2px 2px 2px " + settings.boxShadowColor,
+                                "color": settings.textColor
                             });
                             $(this).css({
                                 "cursor": "pointer"
@@ -66,11 +69,14 @@
                                     "z-index": "999",
                                     "top": positionTop,
                                     "left": positionLeft,
-                                    "border": "1px silver solid",
+                                    "border-width": settings.borderWidth,
+                                    "border-color": settings.borderColor,
+                                    "border-style": settings.borderStyle,
                                     "padding": "8px",
-                                    "background-color": "white",
+                                    "background-color": settings.backgroundColor,
                                     "border-radius": "10px",
-                                    "box-shadow": "2px 2px 2px silver",
+                                    "box-shadow": "2px 2px 2px " + settings.boxShadowColor,
+                                    "color": settings.textColor
                                 });
                                 $(this).css({
                                     "cursor": "pointer"
