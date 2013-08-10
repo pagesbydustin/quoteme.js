@@ -57,6 +57,7 @@
                             $("body div.tips").remove();
                         });
             }
+            
             if (options !== undefined) {
                 if (options.author !== undefined) {
                     $(this).hover(
@@ -94,7 +95,6 @@
                     "top": e.pageY - 50,
                     "left": e.pageX - 25
                 });
-
             });
         });
         return this;
